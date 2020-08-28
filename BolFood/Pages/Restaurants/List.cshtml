@@ -1,0 +1,42 @@
+﻿@page
+@model BolFood.Pages.Restaurants.ListModel
+@{
+}
+
+    <h1>Restaurants</h1>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cusine</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Restaurants.Any())
+                    {
+                        <tr class="text-center">
+                            <td colspan="3">___ No Restaurants were Found ___</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var restaurant in Model.Restaurants)
+                        {
+                            <tr>
+                                <td>@restaurant.Name</td>
+                                <td>@restaurant.Cuisine</td>
+                                <td>@restaurant.Location</td>
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            @Model.Message
+        </div>
+    </div>

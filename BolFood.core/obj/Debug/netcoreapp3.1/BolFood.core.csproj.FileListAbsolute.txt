@@ -1,0 +1,8 @@
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\bin\Debug\netcoreapp3.1\BolFood.core.deps.json
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\bin\Debug\netcoreapp3.1\BolFood.core.dll
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\bin\Debug\netcoreapp3.1\BolFood.core.pdb
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\obj\Debug\netcoreapp3.1\BolFood.core.csprojAssemblyReference.cache
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\obj\Debug\netcoreapp3.1\BolFood.core.AssemblyInfoInputs.cache
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\obj\Debug\netcoreapp3.1\BolFood.core.AssemblyInfo.cs
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\obj\Debug\netcoreapp3.1\BolFood.core.dll
+C:\Users\Humza\source\repos\FoodApp\BolFood.core\obj\Debug\netcoreapp3.1\BolFood.core.pdb

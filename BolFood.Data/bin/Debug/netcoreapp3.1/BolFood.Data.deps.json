@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BolFood.Data/1.0.0": {
+        "dependencies": {
+          "BolFood.core": "1.0.0"
+        },
+        "runtime": {
+          "BolFood.Data.dll": {}
+        }
+      },
+      "BolFood.core/1.0.0": {
+        "runtime": {
+          "BolFood.core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BolFood.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BolFood.core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
