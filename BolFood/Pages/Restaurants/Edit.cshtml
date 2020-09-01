@@ -1,0 +1,47 @@
+﻿@page "{restaurantId:int?}"
+@model BolFood.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editing @Model.Restaurant.Name</h1>
+<div class="card bg-light col-md-6">
+    <div class="card-body">
+        <form class="form" method="post">
+            <input type="hidden" asp-for="Restaurant.Id" />
+
+            <div class="form-row">
+                <div class="col-md">
+                    <label asp-for="Restaurant.Name"></label>
+                    <input asp-for="Restaurant.Name" class="form-control" />
+                    <small>
+                        <span class="text-danger" asp-validation-for="Restaurant.Name"></span>
+                    </small>
+                </div>
+                <div class="col-md">
+                    <label asp-for="Restaurant.Cuisine"></label>
+                    <select asp-for="Restaurant.Cuisine" asp-items="Model.Cuisines" class="form-control">
+                    </select>
+                    <small>
+                        <span class="text-danger" asp-validation-for="Restaurant.Cuisine"></span>
+                    </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Restaurant.Location"></label>
+                <textarea asp-for="Restaurant.Location" class="form-control"></textarea>
+                <small>
+                    <span class="text-danger" asp-validation-for="Restaurant.Location"></span>
+                </small>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Save" />
+        </form>
+    </div>
+</div>
+
+
+<div class="my-2">
+    <a asp-page="./list" class="btn btn-info btn-sm">Restaurants</a>
+</div>
+
+

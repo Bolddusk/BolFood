@@ -149,3 +149,4 @@ C:\Users\Humza\source\repos\FoodApp\BolFood\bin\Debug\netcoreapp3.1\zh-Hant\Micr
 C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\BolFood.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\Detail.cshtml.g.cs
 C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\NotFound.cshtml.g.cs
+C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\Edit.cshtml.g.cs
