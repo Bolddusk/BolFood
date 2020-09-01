@@ -8,7 +8,8 @@ namespace BolFood.Data
 {
     public interface IRestaurantData
     {
-        IEnumerable<Restaurant> GetAll();
+        IEnumerable<Restaurant> GetRestaurantsByName(string name);
+        Restaurant GetRestaurantById(int id);
     }
 
     public class InMemoryRestauranData : IRestaurantData
@@ -26,8 +27,12 @@ namespace BolFood.Data
 
 
         }
-        public IEnumerable<Restaurant> GetAll() => from r in restaurants
-                                                   orderby r.Name
-                                                   select r;
+        public IEnumerable<Restaurant> GetRestaurantsByName(string name = null) => 
+            from r in restaurants
+            where String.IsNullOrEmpty(name) || r.Name.StartsWith(name)
+            orderby r.Name
+            select r;
+        public Restaurant GetRestaurantById(int id) =>
+            restaurants.SingleOrDefault(r => r.Id == id);
     }
 }
