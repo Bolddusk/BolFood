@@ -53,9 +53,11 @@ namespace BolFood.Data
                 restaurants.Remove(restaurant);
             return restaurant;
         }
-        public int Commit()
+        public int Commit() => restaurants.Count;
+
+        public int GetCountOfRestaurants()
         {
-            return 0;
+            throw new NotImplementedException();
         }
     }
 }

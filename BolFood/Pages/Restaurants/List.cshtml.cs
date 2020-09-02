@@ -14,6 +14,7 @@ namespace BolFood.Pages.Restaurants
     {
         private readonly IConfiguration _config;
         private readonly IRestaurantData _restaurantData;
+        [TempData]
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
         [BindProperty(SupportsGet =true)]
@@ -26,7 +27,7 @@ namespace BolFood.Pages.Restaurants
         }
         public void OnGet()
         {
-            Message = _config["Message"];
+            //Message = _config["Message"];
             Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }

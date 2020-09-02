@@ -191,3 +191,6 @@ C:\Users\Humza\source\repos\FoodApp\BolFood\bin\Debug\netcoreapp3.1\runtimes\win
 C:\Users\Humza\source\repos\FoodApp\BolFood\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Humza\source\repos\FoodApp\BolFood\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\BolFood.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Restaurants\Delete.cshtml.g.cs
+C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Summary.cshtml.g.cs
+C:\Users\Humza\source\repos\FoodApp\BolFood\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\Components\RestaurantCount\Default.cshtml.g.cs

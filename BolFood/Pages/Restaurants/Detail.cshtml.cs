@@ -22,7 +22,6 @@ namespace BolFood
         
         public IActionResult OnGet(int restaurantId)
         {
-            //var restaurant = _restaurantData.get
             Restaurant = _restaurantData.GetRestaurantById(restaurantId);
             if (Restaurant == null)
             {

@@ -1,67 +1,105 @@
-﻿@page 
+﻿@page
+
 @model BolFood.Pages.Restaurants.ListModel
 @{
+     ViewData["Title"] = "Restaurants";
 }
 
-    <h1>Restaurants</h1>
-    <a asp-page="./Edit" class="btn btn-primary">Add New</a>
-    <form  method="get" class="my-2">
-        <div class="form-group">
-            <div class="input-group">
-                <input type="search" asp-for="SearchTerm" class="form-control" />
-                <div class="input-group-append">
-                    <button type="submit" class="input-group-text">
-                        <span class="">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                    
-                </div>
-                
+<h1>Restaurants</h1>
+<a asp-page="./Edit" class="btn btn-primary">Add New</a>
+<form method="get" class="my-2">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" asp-for="SearchTerm" class="form-control" />
+            <div class="input-group-append">
+                <button type="submit" class="input-group-text">
+                    <span class="">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </button>
+
             </div>
 
         </div>
-    </form>
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Cusine</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (!Model.Restaurants.Any())
-                    {
-                        <tr class="text-center">
-                            <td colspan="4">___ No Restaurants were Found ___</td>
-                        </tr>
-                    }
-                    else
-                    {
-                        @foreach (var restaurant in Model.Restaurants)
-                        {
-                            <tr>
-                                <td>@restaurant.Name</td>
-                                <td>@restaurant.Cuisine</td>
-                                <td>@restaurant.Location</td>
-                                <td>
-                                    <a asp-page="./Detail" 
-                                       asp-route-restaurantId="@restaurant.Id">
-                                        Detail
-                                    </a>
-                                    <a asp-page="./Edit" 
-                                       asp-route-restaurantId="@restaurant.Id">
-                                        Edit
-                                    </a>
-                                </td>
-                            </tr>
-                        }
-                    }
+    </div>
+</form>
 
-                </tbody>
-            </table>
-        <div class="text-center">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cusine</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.Restaurants.Any())
+        {
+            <tr class="text-center">
+                <td colspan="4">___ No Restaurants were Found ___</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var restaurant in Model.Restaurants)
+            {
+                <partial name="_Summary" model="restaurant" />
+            }
+            @*@foreach (var restaurant in Model.Restaurants)
+            {
+                <tr>
+                    <td>@restaurant.Name</td>
+                    <td>@restaurant.Cuisine</td>
+                    <td>@restaurant.Location</td>
+                    <td>
+                        <a asp-page="./Detail"
+                           asp-route-restaurantId="@restaurant.Id">
+                            Detail
+                        </a>
+                        <a asp-page="./Edit"
+                           asp-route-restaurantId="@restaurant.Id">
+                            Edit
+                        </a>
+                        <a asp-page="./Delete"
+                           asp-route-restaurantId="@restaurant.Id">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }*@
+
+        }
+
+    </tbody>
+</table>
+<div class="text-center">
+    @Model.Message
+</div>
+
+@if (Model.Message != null)
+{
+
+    <div class="toast" style="position: absolute; top: 1rem; right: 1rem;min-width:300px" data-autohide="false">
+        <div class="toast-header">
+            @*<img src="..." class="rounded mr-2" alt="...">*@
+            <strong class="mr-auto">Notification</strong>
+            <small>just now</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
             @Model.Message
         </div>
+    </div>
+}
+    @section scripts{
+        <script>
+            $(document).ready(function () {
+                $('.toast').toast('show');
+            });
+
+        </script>
+    }
+

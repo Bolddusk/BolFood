@@ -34,6 +34,9 @@ namespace BolFood.Data
             return restaurant;
         }
 
+        public int GetCountOfRestaurants() 
+            => db.Restaurants.Count();
+
         public Restaurant GetRestaurantById(int id) => 
             db.Restaurants.Find(id);
 
