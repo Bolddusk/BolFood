@@ -9,3 +9,5 @@ C:\Users\Humza\source\repos\FoodApp\BolFood.Data\bin\Debug\netcoreapp3.1\BolFood
 C:\Users\Humza\source\repos\FoodApp\BolFood.Data\obj\Debug\netcoreapp3.1\BolFood.Data.csproj.CopyComplete
 C:\Users\Humza\source\repos\FoodApp\BolFood.Data\obj\Debug\netcoreapp3.1\BolFood.Data.dll
 C:\Users\Humza\source\repos\FoodApp\BolFood.Data\obj\Debug\netcoreapp3.1\BolFood.Data.pdb
+C:\Users\Humza\source\repos\FoodApp\BolFood.Data\bin\Debug\netcoreapp3.1\BolFood.Data.runtimeconfig.json
+C:\Users\Humza\source\repos\FoodApp\BolFood.Data\bin\Debug\netcoreapp3.1\BolFood.Data.runtimeconfig.dev.json

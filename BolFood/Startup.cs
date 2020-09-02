@@ -6,6 +6,7 @@ using BolFood.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,7 +25,11 @@ namespace BolFood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IRestaurantData, InMemoryRestauranData>();
+            services.AddDbContextPool<BolFoodDbContext>(options=> {
+                options.UseSqlServer(Configuration.GetConnectionString("BolFoodDb"));
+            }); 
+            //services.AddSingleton<IRestaurantData, InMemoryRestauranData>();
+            services.AddScoped<IRestaurantData, SqlRestaurantData>();
             services.AddRazorPages();
         }
 
