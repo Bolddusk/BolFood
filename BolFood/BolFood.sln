@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolFood", "BolFood.csproj", "{D400544A-BE96-4442-BCAC-387B48ED250A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolFood.core", "..\BolFood.core\BolFood.core.csproj", "{96E3EAD5-6D25-401D-BDE1-F3A6D1CD0200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolFood.core", "..\BolFood.core\BolFood.core.csproj", "{96E3EAD5-6D25-401D-BDE1-F3A6D1CD0200}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolFood.Data", "..\BolFood.Data\BolFood.Data.csproj", "{2746BB99-F900-4961-B735-A6B24D15DEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BolFood.Data", "..\BolFood.Data\BolFood.Data.csproj", "{2746BB99-F900-4961-B735-A6B24D15DEF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

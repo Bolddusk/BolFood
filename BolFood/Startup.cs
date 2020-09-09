@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BolFood.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 
 namespace BolFood
@@ -31,6 +34,7 @@ namespace BolFood
             //services.AddSingleton<IRestaurantData, InMemoryRestauranData>();
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
             services.AddRazorPages();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +53,13 @@ namespace BolFood
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            //var temp = new StaticFileOptions();
+            //temp.FileProvider = new PhysicalFileProvider(
+            //    Path.Combine(Directory.GetCurrentDirectory(), "node_modules")
+            //    );
+            //temp.RequestPath = new PathString("/modules");
 
+            //app.UseStaticFiles();   
             app.UseRouting();
 
             app.UseAuthorization();
@@ -57,6 +67,7 @@ namespace BolFood
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
