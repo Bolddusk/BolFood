@@ -51,6 +51,8 @@ namespace BolFood
                 app.UseHsts();
             }
 
+            app.Use(SayHelloMiddleware);
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //var temp = new StaticFileOptions();
@@ -69,6 +71,21 @@ namespace BolFood
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
+        }
+
+        private RequestDelegate SayHelloMiddleware(RequestDelegate arg)
+        {
+            return async ctx =>
+            {
+                if (ctx.Request.Path.StartsWithSegments("/hello"))
+                {
+                    await ctx.Response.WriteAsync("Hello");
+                }
+                else
+                {
+                    await arg(ctx);
+                }
+            };
         }
     }
 }
